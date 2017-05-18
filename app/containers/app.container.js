@@ -1,9 +1,10 @@
 /**
  * Created by cqian19 on 5/17/2017.
  */
+"use strict";
 
 import React from 'react'
-import Search from './search'
+import Search from '../components/search.component'
 
 class AppContainer extends React.Container {
     constructor(props) {
