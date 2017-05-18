@@ -6,7 +6,7 @@
 import React from 'react'
 import Search from '../components/search.component'
 
-class AppContainer extends React.Container {
+class AppContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
