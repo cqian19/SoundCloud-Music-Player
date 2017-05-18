@@ -4,17 +4,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Autocomplete from 'react-autocomplete';
+
 class Search extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.props.handleSubmit}>
-                <input type="text"
-                       value={this.props.searchValue}
-                       onChange={this.props.handleChange}
+            <div className="search">
+                <Autocomplete
+                 ref="autocomplete"
+                 inputProps = {{title: "Title"}}
+                 value={this.props.autoCompleteValue}
+                 items={this.props.tracks}
+                 getItemValue ={(item) => item.title}
+                 onSelect={this.props.handleSelect}
+                 onChange={this.props.handleChange}
+                 renderItem={this.handleRenderItem.bind(this)}
                 />
-                <input type="submit"/>
-            </form>
+            </div>
+        )
+    }
+
+    handleRenderItem(item, isHighlighted) {
+        const listStyles = {
+            item: {
+                padding: '2px 6px',
+                cursor: 'default'
+            },
+
+            highlightedItem: {
+                color: 'white',
+                background: '#F38B72',
+                padding: '2px 6px',
+                cursor: 'default'
+            }
+        };
+        return (
+            <div
+              style={isHighlighteed ? listStyles.highlightedItem : listStyles.item}
+              key={item.id}
+              id={item.id}
+            >
+             {item.title}
+            </div>
         )
     }
 }
