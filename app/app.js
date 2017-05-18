@@ -7,6 +7,7 @@ import Search from './components/search.component';
 import Details from './components/details.component';
 import Player from './components/player.component';
 import Progress from './components/progress.component';
+import Footer from './components/footer.component';
 
 class App extends React.Component {
 
@@ -21,6 +22,7 @@ class App extends React.Component {
                     elapsed={'00:00'}
                     total={'0:40'}
                 />
+                <Footer />
             </div>
         );
     }

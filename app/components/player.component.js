@@ -11,8 +11,8 @@ class Player extends React.Component {
 
     render() {
         const playPauseClass = ClassNames({
-            'fa fa-play': !this.props.playStatus == 'PLAYING',
-            'fa fa-pause': this.props.playStatus == 'PLAYING'
+            'fa fa-play': this.props.playStatus == 'PLAYING' ? false : true,
+            'fa fa-pause': this.props.playStatus == 'PLAYING' ? true : false
         });
 
         return(
