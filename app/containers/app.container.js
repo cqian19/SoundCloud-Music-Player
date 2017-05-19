@@ -116,7 +116,7 @@ class AppContainer extends React.Component {
     };
 
     stop = () => {
-        this.setState({playStatus: SOUNDS.STOPPED, playFromPosition: 0})
+        this.setState({playStatus: SOUNDS.STOPPED, playFromPosition: 0, time_elapsed: 0})
     };
 
     /* Fast forwards by 10 seconds */
