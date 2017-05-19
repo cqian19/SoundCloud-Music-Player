@@ -12,7 +12,7 @@ class Progress extends React.Component {
                 <progress
                     value={this.props.position}
                     max="1"
-                ></progress>
+                />
                 <span className="player__time-total">{this.props.total}</span>
             </div>
         )
