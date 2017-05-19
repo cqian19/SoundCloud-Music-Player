@@ -78,7 +78,7 @@ class AppContainer extends React.Component {
         this.setState({autoCompleteValue: event.target.value});
         const _this = this;
         // Search for song with entered value
-        Axios.get('https://api.soundcloud.com/tracks?client_id=${this.client_id}&q=${value}')
+        Axios.get(`https://api.soundcloud.com/tracks?client_id=${this.client_id}&q=${value}`)
             .then(function(response) {
                 _this.setState({tracks: response.data});
             })
