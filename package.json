@@ -6,7 +6,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose"
+    "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
+    "postinstall": "browserify app/app.js -t babelify -o public/js/bundle.js --debug --verbose"
   },
   "author": "Scotch",
   "license": "MIT",
